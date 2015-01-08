@@ -3,11 +3,14 @@ An attempt to bring Photoshop's Eye Dropper tool into the iPhone. Presented in a
 
 # Features
 Allows user to select swatches based on the image loaded.
+
 Allows user to export those certain swatches to Photoshop. 
 
 # Contributors
 Sony Theakanath (Berkeley) - Team Leader/Lead iOS Engineer
+
 Michael Zhu (Stanford) - UI Designer
+
 Dipsikha Hadler (Berkeley) - UI Designer
 
 # Status
