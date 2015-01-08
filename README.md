@@ -11,7 +11,7 @@ Sony Theakanath (Berkeley) - Team Leader/Lead iOS Engineer
 
 Michael Zhu (Stanford) - UI Designer
 
-Dipsikha Hadler (Berkeley) - UI Designer
+Dipsikha Halder (Berkeley) - UI Designer
 
 # Status
 Development phase, image selection added. Check commits.
