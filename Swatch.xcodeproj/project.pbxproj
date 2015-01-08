@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
+		EB32A0AE1A5E3144000DAE5A /* selector_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */; };
 		EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7E71A5DDF5900D447F7 /* main.m */; };
 		EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7EA1A5DDF5900D447F7 /* AppDelegate.m */; };
 		EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7ED1A5DDF5900D447F7 /* ViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSelectionView.h; path = "Interface Classes/ImageSelectionView.h"; sourceTree = "<group>"; };
+		EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSelectionView.m; path = "Interface Classes/ImageSelectionView.m"; sourceTree = "<group>"; };
+		EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = selector_bg.jpg; sourceTree = "<group>"; };
 		EBF2E7E21A5DDF5900D447F7 /* Swatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF2E7E61A5DDF5900D447F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBF2E7E71A5DDF5900D447F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB32A0AC1A5E3125000DAE5A /* Stock Photos */ = {
+			isa = PBXGroup;
+			children = (
+				EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */,
+			);
+			name = "Stock Photos";
+			sourceTree = "<group>";
+		};
 		EBF2E7D91A5DDF5900D447F7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,9 @@
 				EBF2E7EA1A5DDF5900D447F7 /* AppDelegate.m */,
 				EBF2E7EC1A5DDF5900D447F7 /* ViewController.h */,
 				EBF2E7ED1A5DDF5900D447F7 /* ViewController.m */,
+				EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */,
+				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
+				EB32A0AC1A5E3125000DAE5A /* Stock Photos */,
 				EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */,
 				EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */,
 				EBF2E7F41A5DDF5900D447F7 /* LaunchScreen.xib */,
@@ -202,6 +218,7 @@
 				EBF2E7F11A5DDF5900D447F7 /* Main.storyboard in Resources */,
 				EBF2E7F61A5DDF5900D447F7 /* LaunchScreen.xib in Resources */,
 				EBF2E7F31A5DDF5900D447F7 /* Images.xcassets in Resources */,
+				EB32A0AE1A5E3144000DAE5A /* selector_bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +239,7 @@
 				EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */,
 				EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */,
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,
+				EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +430,7 @@
 				EBF2E8071A5DDF5900D447F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBF2E8081A5DDF5900D447F7 /* Build configuration list for PBXNativeTarget "SwatchTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +439,7 @@
 				EBF2E80A1A5DDF5900D447F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

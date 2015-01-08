@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
+
+@property (nonatomic, strong) ImageSelectionView *topcontroller;
 
 @end
 
@@ -16,8 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    self.topcontroller = [[ImageSelectionView alloc] initWithFrame:CGRectMake(5, 30, screenRect.size.width - 20, screenRect.size.height - 200)];
+    [self.view setBackgroundColor:[UIColor darkGrayColor]];
+    [self.view addSubview:self.topcontroller];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ImageSelectionView.h
 //  Swatch
 //
 //  Created by Sony Theakanath on 1/7/15.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ImageSelectionView.h"
 
-@interface ViewController : UIViewController
+@interface ImageSelectionView : UIView
 
+- (id)initWithFrame:(CGRect)frame;
 
 @end
-
