@@ -53,8 +53,7 @@
 }
 
 
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
     [self.topcontroller setImage:image];
     [self dismissViewControllerAnimated:YES completion:nil];
