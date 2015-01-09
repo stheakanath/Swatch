@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImagePreviewButton.h"
 
 @interface ImageSelectionView : UIView <UIScrollViewDelegate>
 
 - (id)init;
+- (void)setImage:(UIImage*)image;
+- (void)setAlpha:(CGFloat)alpha;
 
 @end

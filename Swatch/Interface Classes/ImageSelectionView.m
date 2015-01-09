@@ -10,8 +10,7 @@
 
 UIScrollView *scrollView;
 UIImageView *imageView;
-UIButton *closebutton;
-UIButton *photobutton;
+
 
 @implementation ImageSelectionView
 
@@ -29,21 +28,15 @@ UIButton *photobutton;
     scrollView.maximumZoomScale = 2.0;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
     [self addSubview:scrollView];
-    
-    //Setting up cancel and photo buttons
-    UIImage *closeimage = [UIImage imageNamed:@"closeicon.png"];
-    closebutton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [closebutton setFrame:CGRectMake(20, 40, closeimage.size.width, closeimage.size.height)];
-    [closebutton setImage:closeimage forState:UIControlStateNormal];
-    [self addSubview:closebutton];
-    
-    UIImage *photoimage = [UIImage imageNamed:@"photoicon.png"];
-    photobutton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [photobutton setFrame:CGRectMake([[UIScreen mainScreen] bounds].size.width-60, 40, photoimage.size.width, photoimage.size.height)];
-    [photobutton setImage:photoimage forState:UIControlStateNormal];
-    [self addSubview:photobutton];
-    
     return self;
+}
+
+- (void) setImage:(UIImage *)image {
+    imageView.image = image;
+}
+
+- (void) setAlpha:(CGFloat)alpha {
+    imageView.alpha = alpha;
 }
 
 # pragma mark - UIScrollView Delegation

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB1316141A5F90FF00C7094E /* photoicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1316121A5F90FF00C7094E /* photoicon@2x.png */; };
 		EB1316151A5F90FF00C7094E /* closeicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1316131A5F90FF00C7094E /* closeicon@2x.png */; };
+		EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */; };
 		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
 		EB32A0AE1A5E3144000DAE5A /* selector_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */; };
 		EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7E71A5DDF5900D447F7 /* main.m */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		EB1316121A5F90FF00C7094E /* photoicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoicon@2x.png"; sourceTree = "<group>"; };
 		EB1316131A5F90FF00C7094E /* closeicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeicon@2x.png"; sourceTree = "<group>"; };
+		EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePreviewButton.h; path = "Interface Classes/ImagePreviewButton.h"; sourceTree = "<group>"; };
+		EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePreviewButton.m; path = "Interface Classes/ImagePreviewButton.m"; sourceTree = "<group>"; };
 		EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSelectionView.h; path = "Interface Classes/ImageSelectionView.h"; sourceTree = "<group>"; };
 		EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSelectionView.m; path = "Interface Classes/ImageSelectionView.m"; sourceTree = "<group>"; };
 		EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = selector_bg.jpg; sourceTree = "<group>"; };
@@ -69,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB1316161A5FB09B00C7094E /* Interface Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */,
+				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
+				EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */,
+				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
+			);
+			name = "Interface Files";
+			sourceTree = "<group>";
+		};
 		EB32A0AC1A5E3125000DAE5A /* Stock Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +118,7 @@
 				EBF2E7EA1A5DDF5900D447F7 /* AppDelegate.m */,
 				EBF2E7EC1A5DDF5900D447F7 /* ViewController.h */,
 				EBF2E7ED1A5DDF5900D447F7 /* ViewController.m */,
-				EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */,
-				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
+				EB1316161A5FB09B00C7094E /* Interface Files */,
 				EB32A0AC1A5E3125000DAE5A /* Stock Photos */,
 				EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */,
 				EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */,
@@ -244,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */,
 				EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */,
 				EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */,
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,
