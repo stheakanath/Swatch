@@ -26,7 +26,6 @@ UIImageView *imageView;
     [scrollView addSubview:imageView];
     scrollView.minimumZoomScale = scrollView.frame.size.width / imageView.frame.size.width;
     scrollView.maximumZoomScale = 2.0;
-   
     [scrollView setZoomScale:scrollView.minimumZoomScale];
     [self addSubview:scrollView];
     return self;
@@ -63,11 +62,7 @@ UIImageView *imageView;
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-     NSLog(@"%f", imageView.frame.size.width);
-    NSLog(@"%f", imageView.frame.size.height);
-
     [self centerScrollViewContents];
-
 }
 
 @end
