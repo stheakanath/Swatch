@@ -20,8 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    self.topcontroller = [[ImageSelectionView alloc] initWithFrame:CGRectMake(5, 30, screenRect.size.width - 20, screenRect.size.height - 200)];
-    [self.view setBackgroundColor:[UIColor darkGrayColor]];
+    self.topcontroller = [[ImageSelectionView alloc] init];
     [self.view addSubview:self.topcontroller];
 }
 

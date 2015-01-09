@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageSelectionView : UIView
+@interface ImageSelectionView : UIView <UIScrollViewDelegate>
 
-- (id)initWithFrame:(CGRect)frame;
+- (id)init;
 
 @end
