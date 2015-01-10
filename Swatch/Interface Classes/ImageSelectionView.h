@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ImagePreviewButton.h"
+#import "ColorDetailer.h"
 
 @interface ImageSelectionView : UIView <UIScrollViewDelegate>
 

@@ -12,6 +12,7 @@
 		EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */; };
 		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
 		EB32A0AE1A5E3144000DAE5A /* selector_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */; };
+		EB9C27451A60A37700EE7221 /* ColorDetailer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C27441A60A37700EE7221 /* ColorDetailer.m */; };
 		EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7E71A5DDF5900D447F7 /* main.m */; };
 		EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7EA1A5DDF5900D447F7 /* AppDelegate.m */; };
 		EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7ED1A5DDF5900D447F7 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 		EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSelectionView.h; path = "Interface Classes/ImageSelectionView.h"; sourceTree = "<group>"; };
 		EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSelectionView.m; path = "Interface Classes/ImageSelectionView.m"; sourceTree = "<group>"; };
 		EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = selector_bg.jpg; sourceTree = "<group>"; };
+		EB9C27431A60A37700EE7221 /* ColorDetailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorDetailer.h; path = "Interface Classes/ColorDetailer.h"; sourceTree = "<group>"; };
+		EB9C27441A60A37700EE7221 /* ColorDetailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorDetailer.m; path = "Interface Classes/ColorDetailer.m"; sourceTree = "<group>"; };
 		EBF2E7E21A5DDF5900D447F7 /* Swatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF2E7E61A5DDF5900D447F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBF2E7E71A5DDF5900D447F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 			children = (
 				EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */,
 				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
+				EB9C27431A60A37700EE7221 /* ColorDetailer.h */,
+				EB9C27441A60A37700EE7221 /* ColorDetailer.m */,
 				EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */,
 				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
 			);
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */,
+				EB9C27451A60A37700EE7221 /* ColorDetailer.m in Sources */,
 				EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */,
 				EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */,
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,

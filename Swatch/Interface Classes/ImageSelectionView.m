@@ -10,7 +10,7 @@
 
 UIScrollView *scrollView;
 UIImageView *imageView;
-
+ColorDetailer *colorDetails;
 
 @implementation ImageSelectionView
 
@@ -27,12 +27,22 @@ UIImageView *imageView;
     scrollView.minimumZoomScale = scrollView.frame.size.width / imageView.frame.size.width;
     scrollView.maximumZoomScale = 2.0;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
+    
+    //COLOR DETAILS
+    colorDetails = [[ColorDetailer alloc] init];
+
+    
+    
     [self addSubview:scrollView];
+        [self addSubview:colorDetails];
+    
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     longPress.delegate = (id)self;
     longPress.minimumPressDuration=0.1;
     scrollView.userInteractionEnabled = YES;
     [scrollView addGestureRecognizer:longPress];
+    
+    
     return self;
 }
 
@@ -50,6 +60,10 @@ UIImageView *imageView;
 - (IBAction)handleLongPress:(UILongPressGestureRecognizer *)sender {
     NSLog(@"detected");
     CGPoint touchPoint=[sender locationInView:imageView];
+    UIColor *clr = [self getRGBPixelColorAtPoint:touchPoint];
+    if (clr != NULL) {
+        [colorDetails changeColor:clr];
+    }
     NSLog(@"%@", [self getRGBPixelColorAtPoint:touchPoint]);
 
 }
