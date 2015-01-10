@@ -47,17 +47,17 @@
 - (IBAction)addImage:(id)sender {
     UIImagePickerController *imagePickController=[[UIImagePickerController alloc]init];
     imagePickController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    imagePickController.delegate=self;
-    imagePickController.allowsEditing=TRUE;
+    imagePickController.delegate = self;
+    imagePickController.allowsEditing = TRUE;
     [self presentViewController:imagePickController animated:YES completion:nil];
 }
 
+# pragma mark - ImagePickerController Delegate
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
     [self.topcontroller setImage:image];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end

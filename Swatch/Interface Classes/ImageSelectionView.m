@@ -7,6 +7,7 @@
 //
 
 #import "ImageSelectionView.h"
+#import <QuartzCore/QuartzCore.h>
 
 UIScrollView *scrollView;
 UIImageView *imageView;
@@ -17,7 +18,7 @@ ColorDetailer *colorDetails;
 - (id)init {
     self = [super initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    //ScrollView and ImageView set up
+    //ScrollView, ImageView, colordetails set up
     scrollView = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [scrollView setBackgroundColor:[UIColor grayColor]];
     [scrollView setDelegate:self];
@@ -27,24 +28,48 @@ ColorDetailer *colorDetails;
     scrollView.minimumZoomScale = scrollView.frame.size.width / imageView.frame.size.width;
     scrollView.maximumZoomScale = 2.0;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
-    
-    //COLOR DETAILS
     colorDetails = [[ColorDetailer alloc] init];
-
     
-    
-    [self addSubview:scrollView];
-        [self addSubview:colorDetails];
-    
+    //Gesture Recognizer for colorDetails
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     longPress.delegate = (id)self;
     longPress.minimumPressDuration=0.1;
     scrollView.userInteractionEnabled = YES;
     [scrollView addGestureRecognizer:longPress];
-    
-    
+    [self addSubview:scrollView];
+    [self addSubview:colorDetails];
     return self;
 }
+
+# pragma mark - Color Selection Functions
+
+- (IBAction)handleLongPress:(UILongPressGestureRecognizer *)sender {
+    CGPoint touchPoint=[sender locationInView:imageView];
+    UIColor *clr = [self colorAtPosition:touchPoint];
+    if (clr != NULL)
+        [colorDetails changeColor:clr];
+}
+
+- (UIColor *)colorAtPosition:(CGPoint)position {
+    CGRect sourceRect = CGRectMake(position.x, position.y, 1.f, 1.f);
+    CGImageRef imageRef = CGImageCreateWithImageInRect(imageView.image.CGImage, sourceRect);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char *buffer = malloc(4);
+    CGBitmapInfo bitmapInfo = kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big;
+    CGContextRef context = CGBitmapContextCreate(buffer, 1, 1, 8, 4, colorSpace, bitmapInfo);
+    CGColorSpaceRelease(colorSpace);
+    CGContextDrawImage(context, CGRectMake(0.f, 0.f, 1.f, 1.f), imageRef);
+    CGImageRelease(imageRef);
+    CGContextRelease(context);
+    CGFloat r = buffer[0] / 255.f;
+    CGFloat g = buffer[1] / 255.f;
+    CGFloat b = buffer[2] / 255.f;
+    CGFloat a = buffer[3] / 255.f;
+    free(buffer);
+    return [UIColor colorWithRed:r green:g blue:b alpha:a];
+}
+
+# pragma mark - Self Delegation Functions
 
 - (void) setImage:(UIImage *)image {
     imageView.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
@@ -54,49 +79,6 @@ ColorDetailer *colorDetails;
 
 - (void) setAlpha:(CGFloat)alpha {
     imageView.alpha = alpha;
-}
-
-
-- (IBAction)handleLongPress:(UILongPressGestureRecognizer *)sender {
-    NSLog(@"detected");
-    CGPoint touchPoint=[sender locationInView:imageView];
-    UIColor *clr = [self getRGBPixelColorAtPoint:touchPoint];
-    if (clr != NULL) {
-        [colorDetails changeColor:clr];
-    }
-    NSLog(@"%@", [self getRGBPixelColorAtPoint:touchPoint]);
-
-}
-
-- (UIColor*)getRGBPixelColorAtPoint:(CGPoint)point {
-    UIColor* color = nil;
-    CGImageRef cgImage = [imageView.image CGImage];
-    size_t width = CGImageGetWidth(cgImage);
-    size_t height = CGImageGetHeight(cgImage);
-    NSUInteger x = (NSUInteger)floor(point.x);
-    NSUInteger y = height - (NSUInteger)floor(point.y);
-    
-    if ((x < width) && (y < height)) {
-        CGDataProviderRef provider = CGImageGetDataProvider(cgImage);
-        CFDataRef bitmapData = CGDataProviderCopyData(provider);
-        const UInt8* data = CFDataGetBytePtr(bitmapData);
-        size_t offset = ((width * y) + x) * 4;
-        #if TARGET_IPHONE_SIMULATOR
-        UInt8 red =   data[offset];
-        UInt8 green = data[offset + 1];
-        UInt8 blue =  data[offset + 2];
-        #else
-        //on device
-        UInt8 blue =  data[offset];
-        UInt8 green = data[offset + 1];
-        UInt8 red =   data[offset + 2];
-        #endif
-        UInt8 alpha = data[offset+3];
-        CFRelease(bitmapData);
-        color = [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha/255.0f];
-    }
-    
-    return color;
 }
 
 # pragma mark - UIScrollView Delegation

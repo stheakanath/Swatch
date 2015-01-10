@@ -14,6 +14,5 @@
 - (id)init;
 - (void)setImage:(UIImage*)image;
 - (void)setAlpha:(CGFloat)alpha;
-- (UIColor*)getRGBPixelColorAtPoint:(CGPoint)point;
 
 @end
