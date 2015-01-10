@@ -12,6 +12,7 @@
 UIScrollView *scrollView;
 UIImageView *imageView;
 ColorDetailer *colorDetails;
+BOOL holding;
 
 @implementation ImageSelectionView
 
@@ -44,11 +45,31 @@ ColorDetailer *colorDetails;
 # pragma mark - Color Selection Functions
 
 - (IBAction)handleLongPress:(UILongPressGestureRecognizer *)sender {
-    CGPoint touchPoint=[sender locationInView:imageView];
-    UIColor *clr = [self colorAtPosition:touchPoint];
-    if (clr != NULL)
-        [colorDetails changeColor:clr location:[sender locationInView:self]];
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        holding = FALSE;
+    }
+    if (!holding) {
+        if (sender.state == UIGestureRecognizerStateBegan) {
+            holding = TRUE;
+            [colorDetails animateBringIn:1];
+            CGPoint touchPoint=[sender locationInView:imageView];
+            UIColor *clr = [self colorAtPosition:touchPoint];
+            if (clr != NULL)
+                [colorDetails changeColor:clr location:[sender locationInView:self]];
+        } else if (sender.state == UIGestureRecognizerStateEnded) {
+            [colorDetails animateBringIn:0];
+            holding = FALSE;
+        }
+    } else {
+        [colorDetails animateBringIn:1];
+        CGPoint touchPoint=[sender locationInView:imageView];
+        UIColor *clr = [self colorAtPosition:touchPoint];
+        if (clr != NULL)
+            [colorDetails changeColor:clr location:[sender locationInView:self]];
+    }
 }
+
+
 
 - (UIColor *)colorAtPosition:(CGPoint)position {
     CGRect sourceRect = CGRectMake(position.x, position.y, 1.f, 1.f);

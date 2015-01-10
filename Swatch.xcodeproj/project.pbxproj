@@ -85,7 +85,6 @@
 				EB9C27431A60A37700EE7221 /* ColorDetailer.h */,
 				EB9C27441A60A37700EE7221 /* ColorDetailer.m */,
 				EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */,
-				EB965C221A61151500EAF560 /* Color@2x.png */,
 				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
 			);
 			name = "Interface Files";
@@ -95,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1316121A5F90FF00C7094E /* photoicon@2x.png */,
+				EB965C221A61151500EAF560 /* Color@2x.png */,
 				EB1316131A5F90FF00C7094E /* closeicon@2x.png */,
 				EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */,
 			);

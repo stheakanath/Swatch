@@ -12,5 +12,6 @@
 
 - (id) init;
 - (void) changeColor:(UIColor*) color location:(CGPoint)point;
+- (void) animateBringIn:(int) alpha;
 
 @end
