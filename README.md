@@ -13,5 +13,9 @@ Michael Zhu (Stanford) - UI Designer
 
 Dipsikha Halder (Berkeley) - UI Designer
 
-# Status
-Development phase, image selection added. Check commits.
+# Bugs
+
+- Adding new picture disregards aspect ratio of new image
+- Does not zoom out fully when adding new image
+- RGB isn't accurate
+
