@@ -47,7 +47,7 @@ ColorDetailer *colorDetails;
     CGPoint touchPoint=[sender locationInView:imageView];
     UIColor *clr = [self colorAtPosition:touchPoint];
     if (clr != NULL)
-        [colorDetails changeColor:clr];
+        [colorDetails changeColor:clr location:[sender locationInView:self]];
 }
 
 - (UIColor *)colorAtPosition:(CGPoint)position {

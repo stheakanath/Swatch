@@ -11,6 +11,6 @@
 @interface ColorDetailer : UIView
 
 - (id) init;
-- (void) changeColor:(UIColor*) color;
+- (void) changeColor:(UIColor*) color location:(CGPoint)point;
 
 @end
