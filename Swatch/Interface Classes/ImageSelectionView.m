@@ -39,6 +39,7 @@ BOOL holding;
     [scrollView addGestureRecognizer:longPress];
     [self addSubview:scrollView];
     [self addSubview:colorDetails];
+    [colorDetails animateBringIn:0];
     return self;
 }
 
