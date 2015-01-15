@@ -8,7 +8,7 @@
 
 #import "ImageSelectionView.h"
 
-
+SavedSwatchView *savedswatches;
 UIScrollView *scrollView;
 UIImageView *imageView;
 BOOL changing;
@@ -47,6 +47,9 @@ BOOL changing;
     [motionDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     if ([motionManager isDeviceMotionAvailable])
         [motionManager startDeviceMotionUpdatesUsingReferenceFrame: CMAttitudeReferenceFrameXArbitraryZVertical];
+    
+    savedswatches = [[SavedSwatchView alloc] init];
+    [self addSubview:savedswatches];
     return self;
 }
 
@@ -55,7 +58,8 @@ BOOL changing;
 - (void)motionRefresh:(id)sender {
     double change = startPitch - motionManager.deviceMotion.attitude.pitch;
     if (change > .3) {
-        NSLog(@"add swatch code here");
+        NSLog(@"Swatch Added!");
+        [savedswatches addSwatch:loop.overlayColor.backgroundColor];
         startPitch = 0;
     }
     double scaled = change / 0.3;

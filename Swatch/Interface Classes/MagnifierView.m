@@ -9,7 +9,7 @@
 #import "MagnifierView.h"
 
 @implementation MagnifierView
-@synthesize viewToMagnify, touchPoint;
+@synthesize viewToMagnify, touchPoint, overlayColor;
 
 - (id)initWithFrame:(CGRect)frame {
 	if (self = [super initWithFrame:CGRectMake(0, 0, 100, 100)]) {

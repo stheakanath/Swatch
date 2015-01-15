@@ -16,6 +16,7 @@
 }
 
 @property (nonatomic, retain) UIView *viewToMagnify;
+@property (nonatomic, retain) UIView *overlayColor;
 @property (nonatomic, assign) CGPoint touchPoint;
 
 - (void)changeAlpha:(CGFloat)num;

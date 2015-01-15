@@ -13,7 +13,6 @@
 @property (nonatomic, strong) ImagePreviewButton *closebutton;
 @property (nonatomic, strong) ImagePreviewButton *photobutton;
 @property (nonatomic, strong) ImageSelectionView *topcontroller;
-@property (nonatomic, strong) SavedSwatchView *savedswatches;
 
 @end
 
@@ -34,8 +33,7 @@
     [self.photobutton addTarget:self action:@selector(addImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.photobutton];
     
-    self.savedswatches = [[SavedSwatchView alloc] init];
-    [self.view addSubview:self.savedswatches];
+
 }
 
 # pragma mark - CustomButton Functions

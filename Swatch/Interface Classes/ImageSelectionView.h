@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import "MagnifierView.h"
+#import "SavedSwatchView.h"
 
 @interface ImageSelectionView : UIView <UIScrollViewDelegate> {
     NSTimer *touchTimer;

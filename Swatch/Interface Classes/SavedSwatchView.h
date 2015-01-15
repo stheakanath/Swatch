@@ -12,5 +12,6 @@
 @interface SavedSwatchView : UIView
 
 - (id)init;
+- (void)addSwatch: (UIColor*)color;
 
 @end
