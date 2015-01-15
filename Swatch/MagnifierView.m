@@ -13,10 +13,10 @@
 @synthesize viewToMagnify, touchPoint;
 
 - (id)initWithFrame:(CGRect)frame {
-	if (self = [super initWithFrame:CGRectMake(0, 0, 80, 80)]) {
+	if (self = [super initWithFrame:CGRectMake(0, 0, 100, 100)]) {
 		self.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-		self.layer.borderWidth = 5;
-		self.layer.cornerRadius = 40;
+		self.layer.borderWidth = 8;
+		self.layer.cornerRadius = 50;
 		self.layer.masksToBounds = YES;
 	}
 	return self;
@@ -24,15 +24,15 @@
 
 - (void)setTouchPoint:(CGPoint)pt {
 	touchPoint = pt;
-    self.layer.borderColor = [[self colorAtPosition:touchPoint] CGColor];
+   self.layer.borderColor = [[self colorAtPosition:touchPoint] CGColor];
 	self.center = CGPointMake(pt.x, pt.y-60);
 }
 
 - (UIColor *)colorAtPosition:(CGPoint)position {
-    CGRect sourceRect = CGRectMake(position.x, position.y, 1.f, 1.f);
+   CGRect sourceRect = CGRectMake(position.x, position.y, 1.f, 1.f);
     UIGraphicsBeginImageContextWithOptions(viewToMagnify.bounds.size, viewToMagnify.opaque, viewToMagnify.contentScaleFactor);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [viewToMagnify.layer renderInContext:context];
+    [self.viewToMagnify drawViewHierarchyInRect:self.viewToMagnify.bounds afterScreenUpdates:YES];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -51,6 +51,25 @@
     CGFloat a = buffer[3] / 255.f;
     free(buffer);
     return [UIColor colorWithRed:r green:g blue:b alpha:a];
+    
+   /* unsigned char pixel[4] = {0};
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    CGContextRef context = CGBitmapContextCreate(pixel, 1, 1, 8, 4, colorSpace, kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedLast);
+    
+    CGContextTranslateCTM(context, -point.x, -point.y);
+    
+    [self.layer renderInContext:context];
+    
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    
+    //NSLog(@"pixel: %d %d %d %d", pixel[0], pixel[1], pixel[2], pixel[3]);
+    
+    UIColor *color = [UIColor colorWithRed:pixel[0]/255.0 green:pixel[1]/255.0 blue:pixel[2]/255.0 alpha:pixel[3]/255.0];
+    
+    return color; */
 }
 
 - (void) changeColor:(UIColor*) color {
@@ -62,7 +81,7 @@
 	CGContextTranslateCTM(context,1*(self.frame.size.width*0.5),1*(self.frame.size.height*0.5));
 	CGContextScaleCTM(context, 3, 3);
 	CGContextTranslateCTM(context,-1*(touchPoint.x),-1*(touchPoint.y));
-	[self.viewToMagnify.layer renderInContext:context];
+    [self.viewToMagnify drawViewHierarchyInRect:self.viewToMagnify.bounds afterScreenUpdates:YES];
 }
 
 @end
