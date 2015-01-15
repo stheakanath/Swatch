@@ -16,6 +16,7 @@
 		EB76DDA11A67733700DF4700 /* photoicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76DD9E1A67733700DF4700 /* photoicon@2x.png */; };
 		EB76DDA21A67733700DF4700 /* selector_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB76DD9F1A67733700DF4700 /* selector_bg.jpg */; };
 		EB76DDA51A67735400DF4700 /* MagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DDA31A67735400DF4700 /* MagnifierView.m */; };
+		EB76DDA81A6773E500DF4700 /* SwatchTile.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DDA71A6773E500DF4700 /* SwatchTile.m */; };
 		EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7E71A5DDF5900D447F7 /* main.m */; };
 		EBF2E7F11A5DDF5900D447F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */; };
 		EBF2E7F31A5DDF5900D447F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */; };
@@ -49,6 +50,8 @@
 		EB76DD9F1A67733700DF4700 /* selector_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = selector_bg.jpg; path = Photos/selector_bg.jpg; sourceTree = "<group>"; };
 		EB76DDA31A67735400DF4700 /* MagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagnifierView.m; path = "Interface Classes/MagnifierView.m"; sourceTree = "<group>"; };
 		EB76DDA41A67735400DF4700 /* MagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagnifierView.h; path = "Interface Classes/MagnifierView.h"; sourceTree = "<group>"; };
+		EB76DDA61A6773E500DF4700 /* SwatchTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwatchTile.h; path = "Interface Classes/SwatchTile.h"; sourceTree = "<group>"; };
+		EB76DDA71A6773E500DF4700 /* SwatchTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwatchTile.m; path = "Interface Classes/SwatchTile.m"; sourceTree = "<group>"; };
 		EBF2E7E21A5DDF5900D447F7 /* Swatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF2E7E61A5DDF5900D447F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBF2E7E71A5DDF5900D447F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,10 +86,12 @@
 			children = (
 				EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */,
 				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
-				EB76DDA31A67735400DF4700 /* MagnifierView.m */,
-				EB76DDA41A67735400DF4700 /* MagnifierView.h */,
 				EB76DD931A67716400DF4700 /* SavedSwatchView.h */,
 				EB76DD941A67716400DF4700 /* SavedSwatchView.m */,
+				EB76DDA61A6773E500DF4700 /* SwatchTile.h */,
+				EB76DDA71A6773E500DF4700 /* SwatchTile.m */,
+				EB76DDA31A67735400DF4700 /* MagnifierView.m */,
+				EB76DDA41A67735400DF4700 /* MagnifierView.h */,
 				EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */,
 				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
 			);
@@ -282,6 +287,7 @@
 				EB76DD951A67716400DF4700 /* SavedSwatchView.m in Sources */,
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,
 				EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */,
+				EB76DDA81A6773E500DF4700 /* SwatchTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

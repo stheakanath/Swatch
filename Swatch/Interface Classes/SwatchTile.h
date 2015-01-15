@@ -1,5 +1,5 @@
 //
-//  SavedSwatchView.h
+//  SwatchTile.h
 //  Swatch
 //
 //  Created by Sony Theakanath on 1/14/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SavedSwatchView : UIView
-
-- (id)init;
+@interface SwatchTile : UIView
 
 @end
