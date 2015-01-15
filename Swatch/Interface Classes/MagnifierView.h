@@ -12,9 +12,11 @@
 @interface MagnifierView : UIView {
 	UIView *viewToMagnify;
 	CGPoint touchPoint;
+    UIView *overlayColor;
 }
 
 @property (nonatomic, retain) UIView *viewToMagnify;
 @property (nonatomic, assign) CGPoint touchPoint;
 
+- (void)changeAlpha:(CGFloat)num;
 @end

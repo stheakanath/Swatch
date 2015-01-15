@@ -88,8 +88,8 @@
 				EB76DD941A67716400DF4700 /* SavedSwatchView.m */,
 				EB76DDA61A6773E500DF4700 /* SwatchTile.h */,
 				EB76DDA71A6773E500DF4700 /* SwatchTile.m */,
-				EB76DDA31A67735400DF4700 /* MagnifierView.m */,
 				EB76DDA41A67735400DF4700 /* MagnifierView.h */,
+				EB76DDA31A67735400DF4700 /* MagnifierView.m */,
 				EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */,
 				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
 			);

@@ -11,7 +11,7 @@
 
 UIScrollView *scrollView;
 UIImageView *imageView;
-BOOL holding;
+BOOL changing;
 
 @implementation ImageSelectionView
 
@@ -40,7 +40,26 @@ BOOL holding;
     [scrollView addGestureRecognizer:tapGestureRecognizer];
     scrollView.userInteractionEnabled = YES;
     [self addSubview:scrollView];
+    
+    motionManager = [[CMMotionManager alloc] init];
+    motionManager.deviceMotionUpdateInterval = 0.05;
+    motionDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(motionRefresh:)];
+    [motionDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    if ([motionManager isDeviceMotionAvailable])
+        [motionManager startDeviceMotionUpdatesUsingReferenceFrame: CMAttitudeReferenceFrameXArbitraryZVertical];
     return self;
+}
+
+# pragma mark - UIAccelerometer Delegation
+
+- (void)motionRefresh:(id)sender {
+    double change = startPitch - motionManager.deviceMotion.attitude.pitch;
+    if (change > .3) {
+        NSLog(@"add swatch code here");
+        startPitch = 0;
+    }
+    double scaled = change / 0.3;
+    [loop changeAlpha:scaled];
 }
 
 # pragma mark - Color Selection Functions
@@ -51,6 +70,9 @@ BOOL holding;
         self.touchTimer = nil;
         [loop removeFromSuperview];
     } else if ([recognizer state] == UIGestureRecognizerStateBegan) {
+        startPitch = motionManager.deviceMotion.attitude.pitch;
+        
+        NSLog(@"%f", startPitch);
         self.touchTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(addLoop) userInfo:nil repeats:NO];
         if(loop == nil){
             loop = [[MagnifierView alloc] init];
@@ -59,6 +81,7 @@ BOOL holding;
         loop.touchPoint = [recognizer locationInView:self];
         [loop setNeedsDisplay];
     } else if ([recognizer state] == UIGestureRecognizerStateChanged) {
+        startPitch = motionManager.deviceMotion.attitude.pitch;
         [self handleAction:recognizer];
     }
 }

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
 #import "MagnifierView.h"
 
 @interface ImageSelectionView : UIView <UIScrollViewDelegate> {
     NSTimer *touchTimer;
     MagnifierView *loop;
+    CMMotionManager *motionManager;
+    CADisplayLink *motionDisplayLink;
+    double startPitch;
 }
 
 @property (nonatomic, retain) NSTimer *touchTimer;

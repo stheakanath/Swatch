@@ -15,8 +15,13 @@
 -(id) init:(UIColor *)swatchColor offset:(int)set {
     self = [UIButton buttonWithType:UIButtonTypeCustom];
     [self setFrame:CGRectMake(set, 0, 50, 60)];
+    [self addTarget:self action:@selector(openDetails:) forControlEvents:UIControlEventTouchUpInside];
     [self setBackgroundColor:swatchColor];
     return self;
+}
+
+-(void) openDetails:(id)sender {
+    NSLog(@"IMPLEMENT ME HEHE");
 }
 
 @end

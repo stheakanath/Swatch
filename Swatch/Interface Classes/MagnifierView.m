@@ -17,14 +17,23 @@
 		self.layer.borderWidth = 8;
 		self.layer.cornerRadius = 50;
 		self.layer.masksToBounds = YES;
+        overlayColor = [[UIView alloc] initWithFrame:self.frame];
+        [overlayColor setAlpha:0];
+        [self addSubview:overlayColor];
 	}
 	return self;
 }
 
 - (void)setTouchPoint:(CGPoint)pt {
 	touchPoint = pt;
-    self.layer.borderColor = [[self colorAtPosition:touchPoint] CGColor];
+    UIColor *clr = [self colorAtPosition:touchPoint];
+    self.layer.borderColor = [clr CGColor];
+    [overlayColor setBackgroundColor:clr];
 	self.center = CGPointMake(pt.x, pt.y-60);
+}
+
+- (void)changeAlpha:(CGFloat)num {
+    [overlayColor setAlpha:num];
 }
 
 - (UIColor *)colorAtPosition:(CGPoint)position {
