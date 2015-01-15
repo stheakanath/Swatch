@@ -8,13 +8,15 @@
 
 #import "ImageSelectionView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MagnifierView.h"
 
 UIScrollView *scrollView;
 UIImageView *imageView;
-ColorDetailer *colorDetails;
 BOOL holding;
 
 @implementation ImageSelectionView
+
+@synthesize touchTimer;
 
 - (id)init {
     self = [super initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -29,23 +31,20 @@ BOOL holding;
     scrollView.minimumZoomScale = scrollView.frame.size.width / imageView.frame.size.width;
     scrollView.maximumZoomScale = 2.0;
     [scrollView setZoomScale:scrollView.minimumZoomScale];
-    colorDetails = [[ColorDetailer alloc] init];
     
     //Gesture Recognizer for colorDetails
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    longPress.delegate = (id)self;
-    longPress.minimumPressDuration=0.1;
+    UILongPressGestureRecognizer *tapGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+    tapGestureRecognizer.minimumPressDuration=0.1;
+    tapGestureRecognizer.delegate = (id)self;
+    [scrollView addGestureRecognizer:tapGestureRecognizer];
     scrollView.userInteractionEnabled = YES;
-    [scrollView addGestureRecognizer:longPress];
     [self addSubview:scrollView];
-    [self addSubview:colorDetails];
-    [colorDetails animateBringIn:0];
     return self;
 }
 
 # pragma mark - Color Selection Functions
 
-- (IBAction)handleLongPress:(UILongPressGestureRecognizer *)sender {
+/*- (IBAction)handleLongPress:(UILongPressGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
         holding = FALSE;
     }
@@ -68,9 +67,34 @@ BOOL holding;
         if (clr != NULL)
             [colorDetails changeColor:clr location:[sender locationInView:self]];
     }
+} */
+
+- (void)handleTapFrom:(UILongPressGestureRecognizer *)recognizer {
+    if ([recognizer state] == UIGestureRecognizerStateEnded) {
+        [self.touchTimer invalidate];
+        self.touchTimer = nil;
+        [loop removeFromSuperview];
+    } else if ([recognizer state] == UIGestureRecognizerStateBegan) {
+        self.touchTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(addLoop) userInfo:nil repeats:NO];
+        if(loop == nil){
+            loop = [[MagnifierView alloc] init];
+            loop.viewToMagnify = self;
+        }
+        loop.touchPoint = [recognizer locationInView:self];
+        [loop setNeedsDisplay];
+    } else if ([recognizer state] == UIGestureRecognizerStateChanged) {
+        [self handleAction:recognizer];
+    }
 }
 
+- (void)addLoop {
+    [self.superview addSubview:loop];
+}
 
+- (void)handleAction:(UILongPressGestureRecognizer*)touch {
+    loop.touchPoint = [touch locationInView:self];
+    [loop setNeedsDisplay];
+}
 
 - (UIColor *)colorAtPosition:(CGPoint)position {
     CGRect sourceRect = CGRectMake(position.x, position.y, 1.f, 1.f);

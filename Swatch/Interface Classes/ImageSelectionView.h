@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "ColorDetailer.h"
+#import "MagnifierView.h"
 
-@interface ImageSelectionView : UIView <UIScrollViewDelegate>
+@interface ImageSelectionView : UIView <UIScrollViewDelegate> {
+    NSTimer *touchTimer;
+    MagnifierView *loop;
+}
 
+@property (nonatomic, retain) NSTimer *touchTimer;
+
+- (void)addLoop;
+- (void)handleAction:(id)timerObj;
 - (id)init;
 - (void)setImage:(UIImage*)image;
 - (void)setAlpha:(CGFloat)alpha;

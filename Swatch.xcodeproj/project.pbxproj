@@ -12,6 +12,7 @@
 		EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */; };
 		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
 		EB32A0AE1A5E3144000DAE5A /* selector_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */; };
+		EB76DD911A6755D700DF4700 /* MagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD8E1A6755D700DF4700 /* MagnifierView.m */; };
 		EB965C231A61151500EAF560 /* Color@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB965C221A61151500EAF560 /* Color@2x.png */; };
 		EB9C27451A60A37700EE7221 /* ColorDetailer.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9C27441A60A37700EE7221 /* ColorDetailer.m */; };
 		EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7E71A5DDF5900D447F7 /* main.m */; };
@@ -41,6 +42,8 @@
 		EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSelectionView.h; path = "Interface Classes/ImageSelectionView.h"; sourceTree = "<group>"; };
 		EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSelectionView.m; path = "Interface Classes/ImageSelectionView.m"; sourceTree = "<group>"; };
 		EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = selector_bg.jpg; sourceTree = "<group>"; };
+		EB76DD8D1A6755D700DF4700 /* MagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnifierView.h; sourceTree = "<group>"; };
+		EB76DD8E1A6755D700DF4700 /* MagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnifierView.m; sourceTree = "<group>"; };
 		EB965C221A61151500EAF560 /* Color@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Color@2x.png"; sourceTree = "<group>"; };
 		EB9C27431A60A37700EE7221 /* ColorDetailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorDetailer.h; path = "Interface Classes/ColorDetailer.h"; sourceTree = "<group>"; };
 		EB9C27441A60A37700EE7221 /* ColorDetailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorDetailer.m; path = "Interface Classes/ColorDetailer.m"; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 		EB1316161A5FB09B00C7094E /* Interface Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB76DD8D1A6755D700DF4700 /* MagnifierView.h */,
+				EB76DD8E1A6755D700DF4700 /* MagnifierView.m */,
 				EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */,
 				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
 				EB9C27431A60A37700EE7221 /* ColorDetailer.h */,
@@ -268,6 +273,7 @@
 			files = (
 				EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */,
 				EB9C27451A60A37700EE7221 /* ColorDetailer.m in Sources */,
+				EB76DD911A6755D700DF4700 /* MagnifierView.m in Sources */,
 				EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */,
 				EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */,
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,
