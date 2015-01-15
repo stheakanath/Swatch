@@ -44,31 +44,6 @@ BOOL holding;
 
 # pragma mark - Color Selection Functions
 
-/*- (IBAction)handleLongPress:(UILongPressGestureRecognizer *)sender {
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        holding = FALSE;
-    }
-    if (!holding) {
-        if (sender.state == UIGestureRecognizerStateBegan) {
-            holding = TRUE;
-            [colorDetails animateBringIn:1];
-            CGPoint touchPoint=[sender locationInView:imageView];
-            UIColor *clr = [self colorAtPosition:touchPoint];
-            if (clr != NULL)
-                [colorDetails changeColor:clr location:[sender locationInView:self]];
-        } else if (sender.state == UIGestureRecognizerStateEnded) {
-            [colorDetails animateBringIn:0];
-            holding = FALSE;
-        }
-    } else {
-        [colorDetails animateBringIn:1];
-        CGPoint touchPoint=[sender locationInView:imageView];
-        UIColor *clr = [self colorAtPosition:touchPoint];
-        if (clr != NULL)
-            [colorDetails changeColor:clr location:[sender locationInView:self]];
-    }
-} */
-
 - (void)handleTapFrom:(UILongPressGestureRecognizer *)recognizer {
     if ([recognizer state] == UIGestureRecognizerStateEnded) {
         [self.touchTimer invalidate];
@@ -95,8 +70,6 @@ BOOL holding;
     loop.touchPoint = [touch locationInView:self];
     [loop setNeedsDisplay];
 }
-
-
 
 # pragma mark - Self Delegation Functions
 
