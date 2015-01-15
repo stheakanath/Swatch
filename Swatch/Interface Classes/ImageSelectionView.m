@@ -7,8 +7,7 @@
 //
 
 #import "ImageSelectionView.h"
-#import <QuartzCore/QuartzCore.h>
-#import "MagnifierView.h"
+
 
 UIScrollView *scrollView;
 UIImageView *imageView;

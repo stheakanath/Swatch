@@ -10,7 +10,7 @@
 #import "ImageSelectionView.h"
 #import "ImagePreviewButton.h"
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 

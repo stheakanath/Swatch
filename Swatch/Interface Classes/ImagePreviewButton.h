@@ -10,6 +10,6 @@
 
 @interface ImagePreviewButton : UIButton
 
-- (id) init:(NSString*)filename belowTop:(CGFloat)height;
+- (id)init:(NSString*)filename belowTop:(CGFloat)height;
 
 @end

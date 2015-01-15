@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB1316141A5F90FF00C7094E /* photoicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1316121A5F90FF00C7094E /* photoicon@2x.png */; };
-		EB1316151A5F90FF00C7094E /* closeicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1316131A5F90FF00C7094E /* closeicon@2x.png */; };
 		EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */; };
 		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
-		EB32A0AE1A5E3144000DAE5A /* selector_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */; };
-		EB76DD911A6755D700DF4700 /* MagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD8E1A6755D700DF4700 /* MagnifierView.m */; };
-		EB965C231A61151500EAF560 /* Color@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB965C221A61151500EAF560 /* Color@2x.png */; };
+		EB76DD951A67716400DF4700 /* SavedSwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD941A67716400DF4700 /* SavedSwatchView.m */; };
+		EB76DD9B1A6772F100DF4700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD981A6772F100DF4700 /* AppDelegate.m */; };
+		EB76DD9C1A6772F100DF4700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD9A1A6772F100DF4700 /* ViewController.m */; };
+		EB76DDA01A67733700DF4700 /* closeicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76DD9D1A67733700DF4700 /* closeicon@2x.png */; };
+		EB76DDA11A67733700DF4700 /* photoicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76DD9E1A67733700DF4700 /* photoicon@2x.png */; };
+		EB76DDA21A67733700DF4700 /* selector_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB76DD9F1A67733700DF4700 /* selector_bg.jpg */; };
+		EB76DDA51A67735400DF4700 /* MagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DDA31A67735400DF4700 /* MagnifierView.m */; };
 		EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7E71A5DDF5900D447F7 /* main.m */; };
-		EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7EA1A5DDF5900D447F7 /* AppDelegate.m */; };
-		EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7ED1A5DDF5900D447F7 /* ViewController.m */; };
 		EBF2E7F11A5DDF5900D447F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */; };
 		EBF2E7F31A5DDF5900D447F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */; };
 		EBF2E7F61A5DDF5900D447F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7F41A5DDF5900D447F7 /* LaunchScreen.xib */; };
@@ -34,23 +34,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EB1316121A5F90FF00C7094E /* photoicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoicon@2x.png"; sourceTree = "<group>"; };
-		EB1316131A5F90FF00C7094E /* closeicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeicon@2x.png"; sourceTree = "<group>"; };
 		EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePreviewButton.h; path = "Interface Classes/ImagePreviewButton.h"; sourceTree = "<group>"; };
 		EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePreviewButton.m; path = "Interface Classes/ImagePreviewButton.m"; sourceTree = "<group>"; };
 		EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSelectionView.h; path = "Interface Classes/ImageSelectionView.h"; sourceTree = "<group>"; };
 		EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSelectionView.m; path = "Interface Classes/ImageSelectionView.m"; sourceTree = "<group>"; };
-		EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = selector_bg.jpg; sourceTree = "<group>"; };
-		EB76DD8D1A6755D700DF4700 /* MagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnifierView.h; sourceTree = "<group>"; };
-		EB76DD8E1A6755D700DF4700 /* MagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnifierView.m; sourceTree = "<group>"; };
-		EB965C221A61151500EAF560 /* Color@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Color@2x.png"; sourceTree = "<group>"; };
+		EB76DD931A67716400DF4700 /* SavedSwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedSwatchView.h; path = "Interface Classes/SavedSwatchView.h"; sourceTree = "<group>"; };
+		EB76DD941A67716400DF4700 /* SavedSwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedSwatchView.m; path = "Interface Classes/SavedSwatchView.m"; sourceTree = "<group>"; };
+		EB76DD971A6772F100DF4700 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Main Files/AppDelegate.h"; sourceTree = "<group>"; };
+		EB76DD981A6772F100DF4700 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Main Files/AppDelegate.m"; sourceTree = "<group>"; };
+		EB76DD991A6772F100DF4700 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "Main Files/ViewController.h"; sourceTree = "<group>"; };
+		EB76DD9A1A6772F100DF4700 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Main Files/ViewController.m"; sourceTree = "<group>"; };
+		EB76DD9D1A67733700DF4700 /* closeicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "closeicon@2x.png"; path = "Photos/closeicon@2x.png"; sourceTree = "<group>"; };
+		EB76DD9E1A67733700DF4700 /* photoicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "photoicon@2x.png"; path = "Photos/photoicon@2x.png"; sourceTree = "<group>"; };
+		EB76DD9F1A67733700DF4700 /* selector_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = selector_bg.jpg; path = Photos/selector_bg.jpg; sourceTree = "<group>"; };
+		EB76DDA31A67735400DF4700 /* MagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MagnifierView.m; path = "Interface Classes/MagnifierView.m"; sourceTree = "<group>"; };
+		EB76DDA41A67735400DF4700 /* MagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MagnifierView.h; path = "Interface Classes/MagnifierView.h"; sourceTree = "<group>"; };
 		EBF2E7E21A5DDF5900D447F7 /* Swatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF2E7E61A5DDF5900D447F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBF2E7E71A5DDF5900D447F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EBF2E7E91A5DDF5900D447F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EBF2E7EA1A5DDF5900D447F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EBF2E7EC1A5DDF5900D447F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EBF2E7ED1A5DDF5900D447F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EBF2E7F01A5DDF5900D447F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBF2E7F51A5DDF5900D447F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,10 +81,12 @@
 		EB1316161A5FB09B00C7094E /* Interface Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB76DD8D1A6755D700DF4700 /* MagnifierView.h */,
-				EB76DD8E1A6755D700DF4700 /* MagnifierView.m */,
 				EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */,
 				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
+				EB76DDA31A67735400DF4700 /* MagnifierView.m */,
+				EB76DDA41A67735400DF4700 /* MagnifierView.h */,
+				EB76DD931A67716400DF4700 /* SavedSwatchView.h */,
+				EB76DD941A67716400DF4700 /* SavedSwatchView.m */,
 				EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */,
 				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
 			);
@@ -93,12 +96,22 @@
 		EB32A0AC1A5E3125000DAE5A /* Stock Photos */ = {
 			isa = PBXGroup;
 			children = (
-				EB1316121A5F90FF00C7094E /* photoicon@2x.png */,
-				EB965C221A61151500EAF560 /* Color@2x.png */,
-				EB1316131A5F90FF00C7094E /* closeicon@2x.png */,
-				EB32A0AD1A5E3144000DAE5A /* selector_bg.jpg */,
+				EB76DD9D1A67733700DF4700 /* closeicon@2x.png */,
+				EB76DD9E1A67733700DF4700 /* photoicon@2x.png */,
+				EB76DD9F1A67733700DF4700 /* selector_bg.jpg */,
 			);
 			name = "Stock Photos";
+			sourceTree = "<group>";
+		};
+		EB76DD961A6772C000DF4700 /* Main Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB76DD971A6772F100DF4700 /* AppDelegate.h */,
+				EB76DD981A6772F100DF4700 /* AppDelegate.m */,
+				EB76DD991A6772F100DF4700 /* ViewController.h */,
+				EB76DD9A1A6772F100DF4700 /* ViewController.m */,
+			);
+			name = "Main Files";
 			sourceTree = "<group>";
 		};
 		EBF2E7D91A5DDF5900D447F7 = {
@@ -122,15 +135,8 @@
 		EBF2E7E41A5DDF5900D447F7 /* Swatch */ = {
 			isa = PBXGroup;
 			children = (
-				EBF2E7E91A5DDF5900D447F7 /* AppDelegate.h */,
-				EBF2E7EA1A5DDF5900D447F7 /* AppDelegate.m */,
-				EBF2E7EC1A5DDF5900D447F7 /* ViewController.h */,
-				EBF2E7ED1A5DDF5900D447F7 /* ViewController.m */,
+				EB76DD961A6772C000DF4700 /* Main Files */,
 				EB1316161A5FB09B00C7094E /* Interface Files */,
-				EB32A0AC1A5E3125000DAE5A /* Stock Photos */,
-				EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */,
-				EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */,
-				EBF2E7F41A5DDF5900D447F7 /* LaunchScreen.xib */,
 				EBF2E7E51A5DDF5900D447F7 /* Supporting Files */,
 			);
 			path = Swatch;
@@ -139,6 +145,10 @@
 		EBF2E7E51A5DDF5900D447F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB32A0AC1A5E3125000DAE5A /* Stock Photos */,
+				EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */,
+				EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */,
+				EBF2E7F41A5DDF5900D447F7 /* LaunchScreen.xib */,
 				EBF2E7E61A5DDF5900D447F7 /* Info.plist */,
 				EBF2E7E71A5DDF5900D447F7 /* main.m */,
 			);
@@ -242,13 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB76DDA01A67733700DF4700 /* closeicon@2x.png in Resources */,
 				EBF2E7F11A5DDF5900D447F7 /* Main.storyboard in Resources */,
 				EBF2E7F61A5DDF5900D447F7 /* LaunchScreen.xib in Resources */,
-				EB965C231A61151500EAF560 /* Color@2x.png in Resources */,
-				EB1316151A5F90FF00C7094E /* closeicon@2x.png in Resources */,
 				EBF2E7F31A5DDF5900D447F7 /* Images.xcassets in Resources */,
-				EB32A0AE1A5E3144000DAE5A /* selector_bg.jpg in Resources */,
-				EB1316141A5F90FF00C7094E /* photoicon@2x.png in Resources */,
+				EB76DDA11A67733700DF4700 /* photoicon@2x.png in Resources */,
+				EB76DDA21A67733700DF4700 /* selector_bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB76DD9C1A6772F100DF4700 /* ViewController.m in Sources */,
 				EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */,
-				EB76DD911A6755D700DF4700 /* MagnifierView.m in Sources */,
-				EBF2E7EE1A5DDF5900D447F7 /* ViewController.m in Sources */,
-				EBF2E7EB1A5DDF5900D447F7 /* AppDelegate.m in Sources */,
+				EB76DDA51A67735400DF4700 /* MagnifierView.m in Sources */,
+				EB76DD9B1A6772F100DF4700 /* AppDelegate.m in Sources */,
+				EB76DD951A67716400DF4700 /* SavedSwatchView.m in Sources */,
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,
 				EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */,
 			);

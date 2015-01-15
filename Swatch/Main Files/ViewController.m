@@ -36,7 +36,7 @@
 # pragma mark - CustomButton Functions
 
 - (IBAction)cancelImage:(id)sender {
-    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{ //fix this shit
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [self.topcontroller setAlpha:0];
     } completion:^ (BOOL finished) {
         [self.topcontroller setAlpha:1];

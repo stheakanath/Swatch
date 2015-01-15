@@ -10,7 +10,7 @@
 
 @implementation ImagePreviewButton
 
-- (id) init:(NSString*)filename belowTop:(CGFloat)height {
+- (id)init:(NSString*)filename belowTop:(CGFloat)height {
     UIImage *def = [UIImage imageNamed:filename];
     self = [UIButton buttonWithType:UIButtonTypeCustom];
     [self setFrame:CGRectMake(height, 40, def.size.width, def.size.height)];

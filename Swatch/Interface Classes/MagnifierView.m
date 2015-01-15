@@ -7,7 +7,6 @@
 //
 
 #import "MagnifierView.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation MagnifierView
 @synthesize viewToMagnify, touchPoint;
