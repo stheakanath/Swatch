@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuartzCore/QuartzCore.h"
 
 @interface MagnifierView : UIView {
 	UIView *viewToMagnify;
@@ -14,6 +15,6 @@
 }
 
 @property (nonatomic, retain) UIView *viewToMagnify;
-@property (assign) CGPoint touchPoint;
+@property (nonatomic, assign) CGPoint touchPoint;
 
 @end

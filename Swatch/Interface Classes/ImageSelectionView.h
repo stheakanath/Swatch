@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ColorDetailer.h"
 #import "MagnifierView.h"
 
 @interface ImageSelectionView : UIView <UIScrollViewDelegate> {
