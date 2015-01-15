@@ -12,6 +12,6 @@
 
 @property (nonatomic, retain) UIColor *color;
 
--(id) init:(UIColor*)swatchColor;
+-(id) init:(UIColor*)swatchColor offset:(int)set;
 
 @end

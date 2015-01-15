@@ -12,9 +12,9 @@
 
 @synthesize color;
 
--(id) init:(UIColor *)swatchColor {
+-(id) init:(UIColor *)swatchColor offset:(int)set {
     self = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self setFrame:CGRectMake(0, 0, 50, 50)];
+    [self setFrame:CGRectMake(set, 0, 50, 60)];
     [self setBackgroundColor:swatchColor];
     return self;
 }

@@ -20,7 +20,6 @@
 		EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E7E71A5DDF5900D447F7 /* main.m */; };
 		EBF2E7F11A5DDF5900D447F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */; };
 		EBF2E7F31A5DDF5900D447F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */; };
-		EBF2E7F61A5DDF5900D447F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF2E7F41A5DDF5900D447F7 /* LaunchScreen.xib */; };
 		EBF2E8021A5DDF5900D447F7 /* SwatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF2E8011A5DDF5900D447F7 /* SwatchTests.m */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		EBF2E7E71A5DDF5900D447F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EBF2E7F01A5DDF5900D447F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EBF2E7F51A5DDF5900D447F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EBF2E7FB1A5DDF5900D447F7 /* SwatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF2E8001A5DDF5900D447F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBF2E8011A5DDF5900D447F7 /* SwatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwatchTests.m; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				EB32A0AC1A5E3125000DAE5A /* Stock Photos */,
 				EBF2E7F21A5DDF5900D447F7 /* Images.xcassets */,
 				EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */,
-				EBF2E7F41A5DDF5900D447F7 /* LaunchScreen.xib */,
 				EBF2E7E61A5DDF5900D447F7 /* Info.plist */,
 				EBF2E7E71A5DDF5900D447F7 /* main.m */,
 			);
@@ -259,7 +256,6 @@
 			files = (
 				EB76DDA01A67733700DF4700 /* closeicon@2x.png in Resources */,
 				EBF2E7F11A5DDF5900D447F7 /* Main.storyboard in Resources */,
-				EBF2E7F61A5DDF5900D447F7 /* LaunchScreen.xib in Resources */,
 				EBF2E7F31A5DDF5900D447F7 /* Images.xcassets in Resources */,
 				EB76DDA11A67733700DF4700 /* photoicon@2x.png in Resources */,
 				EB76DDA21A67733700DF4700 /* selector_bg.jpg in Resources */,
@@ -316,14 +312,6 @@
 				EBF2E7F01A5DDF5900D447F7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EBF2E7F41A5DDF5900D447F7 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBF2E7F51A5DDF5900D447F7 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -411,6 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Swatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,6 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Swatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
