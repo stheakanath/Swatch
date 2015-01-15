@@ -7,6 +7,7 @@
 //
 
 #import "SavedSwatchView.h"
+#import "UIColorAdditions.h"
 
 UIScrollView *scrollableSwatches;
 NSMutableArray *colorArray;
@@ -19,10 +20,10 @@ NSMutableArray *colorArray;
     scrollableSwatches = [[UIScrollView alloc] initWithFrame: CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 60)];
     scrollableSwatches.userInteractionEnabled = YES;
     [self addSubview:scrollableSwatches];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *savedcolors = [documentsDirectory stringByAppendingPathComponent:@"colors.dat"];
-    colorArray = [[NSMutableArray alloc] initWithContentsOfFile:savedcolors];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSArray *saveddata = [userDefaults objectForKey:@"colors"];
+    colorArray = [self convertToUIColor:saveddata]; //convert this
     if(colorArray == nil)
         colorArray = [[NSMutableArray alloc] init];
     [self loadSwatches];
@@ -42,14 +43,29 @@ NSMutableArray *colorArray;
 
 - (void)addSwatch: (UIColor*)color {
     if (!(color == nil) && !([color isEqual:[colorArray lastObject]])) {
-        NSLog(@"%@", color);
         [colorArray addObject:color];
         NSLog(@"%@", colorArray);
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        [colorArray writeToFile:[documentsDirectory stringByAppendingPathComponent:@"colors.dat"] atomically:YES];
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:[self convertToNSString:colorArray] forKey:@"colors"];
+        [userDefaults synchronize];
         [self loadSwatches];
     }
+}
+
+- (NSMutableArray*)convertToUIColor: (NSArray*) arr {
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for (NSString* elem in arr) {
+        [result addObject:[NSString colorFromNSString: elem]];
+    }
+    return result;
+}
+
+- (NSArray*)convertToNSString: (NSMutableArray*) arr {
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for (UIColor* elem in arr) {
+        [result addObject:[UIColor stringFromUIColor: elem]];
+    }
+    return [NSArray arrayWithArray:result];
 }
 
 @end

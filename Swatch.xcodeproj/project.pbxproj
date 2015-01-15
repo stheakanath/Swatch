@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */; };
 		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
+		EB65618B1A687A8C00D60186 /* UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB65618A1A687A8C00D60186 /* UIColorAdditions.m */; };
 		EB76DD951A67716400DF4700 /* SavedSwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD941A67716400DF4700 /* SavedSwatchView.m */; };
 		EB76DD9B1A6772F100DF4700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD981A6772F100DF4700 /* AppDelegate.m */; };
 		EB76DD9C1A6772F100DF4700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD9A1A6772F100DF4700 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 		EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePreviewButton.m; path = "Interface Classes/ImagePreviewButton.m"; sourceTree = "<group>"; };
 		EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSelectionView.h; path = "Interface Classes/ImageSelectionView.h"; sourceTree = "<group>"; };
 		EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSelectionView.m; path = "Interface Classes/ImageSelectionView.m"; sourceTree = "<group>"; };
+		EB6561891A687A8C00D60186 /* UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIColorAdditions.h; path = "Interface Classes/UIColorAdditions.h"; sourceTree = "<group>"; };
+		EB65618A1A687A8C00D60186 /* UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIColorAdditions.m; path = "Interface Classes/UIColorAdditions.m"; sourceTree = "<group>"; };
 		EB76DD931A67716400DF4700 /* SavedSwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedSwatchView.h; path = "Interface Classes/SavedSwatchView.h"; sourceTree = "<group>"; };
 		EB76DD941A67716400DF4700 /* SavedSwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedSwatchView.m; path = "Interface Classes/SavedSwatchView.m"; sourceTree = "<group>"; };
 		EB76DD971A6772F100DF4700 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Main Files/AppDelegate.h"; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				EB76DDA31A67735400DF4700 /* MagnifierView.m */,
 				EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */,
 				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
+				EB6561891A687A8C00D60186 /* UIColorAdditions.h */,
+				EB65618A1A687A8C00D60186 /* UIColorAdditions.m */,
 			);
 			name = "Interface Files";
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				EB76DD951A67716400DF4700 /* SavedSwatchView.m in Sources */,
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,
 				EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */,
+				EB65618B1A687A8C00D60186 /* UIColorAdditions.m in Sources */,
 				EB76DDA81A6773E500DF4700 /* SwatchTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
