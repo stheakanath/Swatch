@@ -10,12 +10,13 @@
 
 @implementation SwatchTile
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+@synthesize color;
+
+-(id) init:(UIColor *)swatchColor {
+    self = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self setFrame:CGRectMake(0, 0, 50, 50)];
+    [self setBackgroundColor:swatchColor];
+    return self;
 }
-*/
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ImageSelectionView.h"
 #import "ImagePreviewButton.h"
+#import "SavedSwatchView.h"
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 

@@ -18,11 +18,13 @@ BOOL holding;
 @synthesize touchTimer;
 
 - (id)init {
-    self = [super initWithFrame:[[UIScreen mainScreen] bounds]];
+    self = [super initWithFrame:CGRectMake(0, 10, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 100)];
     
     //ScrollView, ImageView, colordetails set up
-    scrollView = [[UIScrollView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [scrollView setBackgroundColor:[UIColor grayColor]];
+    scrollView = [[UIScrollView alloc] initWithFrame:self.frame];
+    
+    //[scrollView setBackgroundColor:[UIColor colorWithRed:149/255.0 green:165/255.0 blue:166/255.0 alpha:1]];
+    [scrollView setBackgroundColor:[UIColor darkGrayColor]];
     [scrollView setDelegate:self];
     imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selector_bg.jpg"]];
     scrollView.contentSize = imageView.frame.size;

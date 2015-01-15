@@ -8,14 +8,16 @@
 
 #import "SavedSwatchView.h"
 
+UIScrollView *scrollableSwatches;
+
 @implementation SavedSwatchView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (id) init {
+    self = [super initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height - 80, [[UIScreen mainScreen] bounds].size.width, 80)];
+    [self setBackgroundColor:[UIColor colorWithRed:33.0/255.0 green:39.0/255.0 blue:49.0/255.0 alpha:1]];
+    scrollableSwatches = [[UIScrollView alloc] initWithFrame: CGRectMake(0, 10, [[UIScreen mainScreen] bounds].size.width, 60)];
+    [self addSubview:scrollableSwatches];
+    return self;
 }
-*/
 
 @end

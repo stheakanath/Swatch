@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SwatchTile : UIView
+@interface SwatchTile : UIButton
+
+@property (nonatomic, retain) UIColor *color;
+
+-(id) init:(UIColor*)swatchColor;
 
 @end

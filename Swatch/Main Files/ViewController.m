@@ -13,6 +13,7 @@
 @property (nonatomic, strong) ImagePreviewButton *closebutton;
 @property (nonatomic, strong) ImagePreviewButton *photobutton;
 @property (nonatomic, strong) ImageSelectionView *topcontroller;
+@property (nonatomic, strong) SavedSwatchView *savedswatches;
 
 @end
 
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.topcontroller = [[ImageSelectionView alloc] init];
+    [self.view setBackgroundColor:[UIColor colorWithRed:33.0/255.0 green:39.0/255.0 blue:49.0/255.0 alpha:1]];
     [self.view addSubview:self.topcontroller];
     
     //Buttons
@@ -31,6 +33,9 @@
     self.photobutton = [[ImagePreviewButton alloc] init:@"photoicon.png" belowTop:[[UIScreen mainScreen] bounds].size.width-60];
     [self.photobutton addTarget:self action:@selector(addImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.photobutton];
+    
+    self.savedswatches = [[SavedSwatchView alloc] init];
+    [self.view addSubview:self.savedswatches];
 }
 
 # pragma mark - CustomButton Functions
