@@ -15,7 +15,4 @@ Dipsikha Halder (Berkeley) - UI Designer
 
 # Bugs
 
-- Adding new picture disregards aspect ratio of new image
-- Does not zoom out fully when adding new image
-- RGB isn't accurate
-
+TO DO
