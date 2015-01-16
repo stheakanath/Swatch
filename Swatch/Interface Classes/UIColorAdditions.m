@@ -11,8 +11,9 @@
 @implementation UIColor (UIColorAdditions)
 
 + (NSString *)stringFromUIColor:(UIColor *)color {
-    return [NSString stringWithFormat:@"%@", color ];
+    return [NSString stringWithFormat:@"%@", color];
 }
+
 @end
 
 @implementation NSString (UIColorAdditions)
@@ -28,4 +29,30 @@
     
     return color;
 }
+
++ (NSString *)cleanStringFromUIColor: (UIColor *) color {
+    NSArray *values = [[NSString stringWithFormat:@"%@", color] componentsSeparatedByString:@" "];
+    int red = [[values objectAtIndex:1] floatValue]*255;
+    int green = [[values objectAtIndex:2] floatValue]*255;
+    int blue = [[values objectAtIndex:3] floatValue]*255;
+    return [NSString stringWithFormat:@"rgb: %i %i %i", red, green, blue];
+}
+
++ (int)totalvalue: (UIColor *) color {
+    NSArray *values = [[NSString stringWithFormat:@"%@", color] componentsSeparatedByString:@" "];
+    int red = [[values objectAtIndex:1] floatValue]*255;
+    int green = [[values objectAtIndex:2] floatValue]*255;
+    int blue = [[values objectAtIndex:3] floatValue]*255;
+    return red + green + blue;
+}
+
++ (NSString *)hexStringForColor:(UIColor *)color {
+    const CGFloat *components = CGColorGetComponents(color.CGColor);
+    CGFloat r = components[0];
+    CGFloat g = components[1];
+    CGFloat b = components[2];
+    NSString *hexString=[NSString stringWithFormat:@"hex: %02X%02X%02X", (int)(r * 255), (int)(g * 255), (int)(b * 255)];
+    return hexString;
+}
+
 @end

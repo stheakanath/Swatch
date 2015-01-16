@@ -13,10 +13,14 @@
 
 + (NSString *)stringFromUIColor:(UIColor *)color;
 
+
 @end
 
 @interface NSString (UIColorAdditions)
 
 + (UIColor *)colorFromNSString:(NSString *)string;
++ (NSString *)cleanStringFromUIColor: (UIColor *) color;
++ (NSString *)hexStringForColor:(UIColor *)color;
++ (int)totalvalue: (UIColor *) color;
 
 @end

@@ -20,6 +20,7 @@
 }
 
 @property (nonatomic, retain) NSTimer *touchTimer;
+@property (nonatomic, strong) SavedSwatchView *savedswatches;
 
 - (void)addLoop;
 - (void)handleAction:(id)timerObj;

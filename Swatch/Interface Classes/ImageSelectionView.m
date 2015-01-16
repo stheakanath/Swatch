@@ -8,20 +8,19 @@
 
 #import "ImageSelectionView.h"
 
-SavedSwatchView *savedswatches;
 UIScrollView *scrollView;
 UIImageView *imageView;
 BOOL changing;
 
 @implementation ImageSelectionView
 
-@synthesize touchTimer;
+@synthesize touchTimer, savedswatches;
 
 - (id)init {
-    self = [super initWithFrame:CGRectMake(0, 10, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 100)];
+    self = [super initWithFrame:CGRectMake(0, 10, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 10)];
     
     //ScrollView, ImageView, colordetails set up
-    scrollView = [[UIScrollView alloc] initWithFrame:self.frame];
+    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 10, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-190)];
     
     //[scrollView setBackgroundColor:[UIColor colorWithRed:149/255.0 green:165/255.0 blue:166/255.0 alpha:1]];
     [scrollView setBackgroundColor:[UIColor darkGrayColor]];
@@ -42,7 +41,7 @@ BOOL changing;
     [self addSubview:scrollView];
     
     motionManager = [[CMMotionManager alloc] init];
-    motionManager.deviceMotionUpdateInterval = 0.05;
+    motionManager.deviceMotionUpdateInterval = 0.02;
     motionDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(motionRefresh:)];
     [motionDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     if ([motionManager isDeviceMotionAvailable])
@@ -57,12 +56,12 @@ BOOL changing;
 
 - (void)motionRefresh:(id)sender {
     double change = startPitch - motionManager.deviceMotion.attitude.pitch;
-    if (change > .3) {
+    if (change > .2) {
         NSLog(@"Swatch Added!");
         [savedswatches addSwatch:loop.overlayColor.backgroundColor];
         startPitch = 0;
     }
-    double scaled = change / 0.3;
+    double scaled = change / 0.2;
     [loop changeAlpha:scaled];
 }
 

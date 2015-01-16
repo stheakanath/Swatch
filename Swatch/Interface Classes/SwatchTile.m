@@ -7,21 +7,23 @@
 //
 
 #import "SwatchTile.h"
+#import "SavedSwatchView.h"
 
 @implementation SwatchTile
 
 @synthesize color;
 
 -(id) init:(UIColor *)swatchColor offset:(int)set {
-    self = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self setFrame:CGRectMake(set, 0, 50, 60)];
-    [self addTarget:self action:@selector(openDetails:) forControlEvents:UIControlEventTouchUpInside];
+    self = [super initWithFrame:CGRectMake(set, 0, 50, 60)];
+    color = swatchColor;
     [self setBackgroundColor:swatchColor];
     return self;
 }
 
--(void) openDetails:(id)sender {
-    NSLog(@"IMPLEMENT ME HEHE");
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"sex");
+    SavedSwatchView *test = [SavedSwatchView alloc];
+    [test.exportView setDetails:color];
 }
 
 @end

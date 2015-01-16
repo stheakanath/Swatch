@@ -32,9 +32,8 @@
     self.photobutton = [[ImagePreviewButton alloc] init:@"photoicon.png" belowTop:[[UIScreen mainScreen] bounds].size.width-60];
     [self.photobutton addTarget:self action:@selector(addImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.photobutton];
-    
-
 }
+
 
 # pragma mark - CustomButton Functions
 

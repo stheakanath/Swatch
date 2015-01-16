@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */; };
+		EB1D3F921A68EA8100BF3B9C /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB65618C1A68E3FE00D60186 /* Raleway-ExtraLight.ttf */; };
+		EB1D3F951A68EB7A00BF3B9C /* ExportSwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1D3F941A68EB7A00BF3B9C /* ExportSwatchView.m */; };
+		EB1D3F971A68EDEE00BF3B9C /* psd_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1D3F961A68EDEE00BF3B9C /* psd_dark@2x.png */; };
+		EB1D3F991A68EDF500BF3B9C /* mail_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1D3F981A68EDF500BF3B9C /* mail_dark@2x.png */; };
+		EB1D3F9B1A69034700BF3B9C /* mail_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1D3F9A1A69034700BF3B9C /* mail_light@2x.png */; };
+		EB1D3F9D1A69036C00BF3B9C /* psd_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1D3F9C1A69036C00BF3B9C /* psd_light@2x.png */; };
+		EB1D3FA01A69059D00BF3B9C /* ASEColorWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1D3F9F1A69059D00BF3B9C /* ASEColorWriter.m */; };
 		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
 		EB65618B1A687A8C00D60186 /* UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB65618A1A687A8C00D60186 /* UIColorAdditions.m */; };
+		EB65618F1A68E53000D60186 /* RalewayLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB65618E1A68E53000D60186 /* RalewayLabel.m */; };
 		EB76DD951A67716400DF4700 /* SavedSwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD941A67716400DF4700 /* SavedSwatchView.m */; };
 		EB76DD9B1A6772F100DF4700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD981A6772F100DF4700 /* AppDelegate.m */; };
 		EB76DD9C1A6772F100DF4700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD9A1A6772F100DF4700 /* ViewController.m */; };
@@ -37,10 +45,21 @@
 /* Begin PBXFileReference section */
 		EB1316171A5FB0F100C7094E /* ImagePreviewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePreviewButton.h; path = "Interface Classes/ImagePreviewButton.h"; sourceTree = "<group>"; };
 		EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePreviewButton.m; path = "Interface Classes/ImagePreviewButton.m"; sourceTree = "<group>"; };
+		EB1D3F931A68EB7A00BF3B9C /* ExportSwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExportSwatchView.h; path = "Interface Classes/ExportSwatchView.h"; sourceTree = "<group>"; };
+		EB1D3F941A68EB7A00BF3B9C /* ExportSwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExportSwatchView.m; path = "Interface Classes/ExportSwatchView.m"; sourceTree = "<group>"; };
+		EB1D3F961A68EDEE00BF3B9C /* psd_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "psd_dark@2x.png"; sourceTree = "<group>"; };
+		EB1D3F981A68EDF500BF3B9C /* mail_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail_dark@2x.png"; sourceTree = "<group>"; };
+		EB1D3F9A1A69034700BF3B9C /* mail_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail_light@2x.png"; sourceTree = "<group>"; };
+		EB1D3F9C1A69036C00BF3B9C /* psd_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "psd_light@2x.png"; sourceTree = "<group>"; };
+		EB1D3F9E1A69059D00BF3B9C /* ASEColorWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASEColorWriter.h; sourceTree = "<group>"; };
+		EB1D3F9F1A69059D00BF3B9C /* ASEColorWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASEColorWriter.m; sourceTree = "<group>"; };
 		EB32A0A91A5E2AEA000DAE5A /* ImageSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageSelectionView.h; path = "Interface Classes/ImageSelectionView.h"; sourceTree = "<group>"; };
 		EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageSelectionView.m; path = "Interface Classes/ImageSelectionView.m"; sourceTree = "<group>"; };
 		EB6561891A687A8C00D60186 /* UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIColorAdditions.h; path = "Interface Classes/UIColorAdditions.h"; sourceTree = "<group>"; };
 		EB65618A1A687A8C00D60186 /* UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIColorAdditions.m; path = "Interface Classes/UIColorAdditions.m"; sourceTree = "<group>"; };
+		EB65618C1A68E3FE00D60186 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EB65618D1A68E53000D60186 /* RalewayLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RalewayLabel.h; path = "Interface Classes/RalewayLabel.h"; sourceTree = "<group>"; };
+		EB65618E1A68E53000D60186 /* RalewayLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RalewayLabel.m; path = "Interface Classes/RalewayLabel.m"; sourceTree = "<group>"; };
 		EB76DD931A67716400DF4700 /* SavedSwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedSwatchView.h; path = "Interface Classes/SavedSwatchView.h"; sourceTree = "<group>"; };
 		EB76DD941A67716400DF4700 /* SavedSwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedSwatchView.m; path = "Interface Classes/SavedSwatchView.m"; sourceTree = "<group>"; };
 		EB76DD971A6772F100DF4700 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Main Files/AppDelegate.h"; sourceTree = "<group>"; };
@@ -89,6 +108,8 @@
 				EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */,
 				EB76DD931A67716400DF4700 /* SavedSwatchView.h */,
 				EB76DD941A67716400DF4700 /* SavedSwatchView.m */,
+				EB1D3F931A68EB7A00BF3B9C /* ExportSwatchView.h */,
+				EB1D3F941A68EB7A00BF3B9C /* ExportSwatchView.m */,
 				EB76DDA61A6773E500DF4700 /* SwatchTile.h */,
 				EB76DDA71A6773E500DF4700 /* SwatchTile.m */,
 				EB76DDA41A67735400DF4700 /* MagnifierView.h */,
@@ -97,6 +118,10 @@
 				EB1316181A5FB0F100C7094E /* ImagePreviewButton.m */,
 				EB6561891A687A8C00D60186 /* UIColorAdditions.h */,
 				EB65618A1A687A8C00D60186 /* UIColorAdditions.m */,
+				EB65618D1A68E53000D60186 /* RalewayLabel.h */,
+				EB65618E1A68E53000D60186 /* RalewayLabel.m */,
+				EB1D3F9E1A69059D00BF3B9C /* ASEColorWriter.h */,
+				EB1D3F9F1A69059D00BF3B9C /* ASEColorWriter.m */,
 			);
 			name = "Interface Files";
 			sourceTree = "<group>";
@@ -104,6 +129,10 @@
 		EB32A0AC1A5E3125000DAE5A /* Stock Photos */ = {
 			isa = PBXGroup;
 			children = (
+				EB1D3F961A68EDEE00BF3B9C /* psd_dark@2x.png */,
+				EB1D3F9C1A69036C00BF3B9C /* psd_light@2x.png */,
+				EB1D3F981A68EDF500BF3B9C /* mail_dark@2x.png */,
+				EB1D3F9A1A69034700BF3B9C /* mail_light@2x.png */,
 				EB76DD9D1A67733700DF4700 /* closeicon@2x.png */,
 				EB76DD9E1A67733700DF4700 /* photoicon@2x.png */,
 				EB76DD9F1A67733700DF4700 /* selector_bg.jpg */,
@@ -158,6 +187,7 @@
 				EBF2E7EF1A5DDF5900D447F7 /* Main.storyboard */,
 				EBF2E7E61A5DDF5900D447F7 /* Info.plist */,
 				EBF2E7E71A5DDF5900D447F7 /* main.m */,
+				EB65618C1A68E3FE00D60186 /* Raleway-ExtraLight.ttf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,9 +289,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1D3F921A68EA8100BF3B9C /* Raleway-ExtraLight.ttf in Resources */,
 				EB76DDA01A67733700DF4700 /* closeicon@2x.png in Resources */,
+				EB1D3F971A68EDEE00BF3B9C /* psd_dark@2x.png in Resources */,
+				EB1D3F991A68EDF500BF3B9C /* mail_dark@2x.png in Resources */,
 				EBF2E7F11A5DDF5900D447F7 /* Main.storyboard in Resources */,
+				EB1D3F9B1A69034700BF3B9C /* mail_light@2x.png in Resources */,
 				EBF2E7F31A5DDF5900D447F7 /* Images.xcassets in Resources */,
+				EB1D3F9D1A69036C00BF3B9C /* psd_light@2x.png in Resources */,
 				EB76DDA11A67733700DF4700 /* photoicon@2x.png in Resources */,
 				EB76DDA21A67733700DF4700 /* selector_bg.jpg in Resources */,
 			);
@@ -281,6 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1D3FA01A69059D00BF3B9C /* ASEColorWriter.m in Sources */,
+				EB65618F1A68E53000D60186 /* RalewayLabel.m in Sources */,
 				EB76DD9C1A6772F100DF4700 /* ViewController.m in Sources */,
 				EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */,
 				EB76DDA51A67735400DF4700 /* MagnifierView.m in Sources */,
@@ -289,6 +326,7 @@
 				EBF2E7E81A5DDF5900D447F7 /* main.m in Sources */,
 				EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */,
 				EB65618B1A687A8C00D60186 /* UIColorAdditions.m in Sources */,
+				EB1D3F951A68EB7A00BF3B9C /* ExportSwatchView.m in Sources */,
 				EB76DDA81A6773E500DF4700 /* SwatchTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SwatchTile.h"
+#import "ExportSwatchView.h"
 
-@interface SavedSwatchView : UIView
+@interface SavedSwatchView : UIView <UIScrollViewDelegate>
 
 - (id)init;
 - (void)addSwatch: (UIColor*)color;
 
+@property (nonatomic) int offset;
+@property (nonatomic, strong) UIScrollView *scrollableSwatches;
+@property (nonatomic, strong) ExportSwatchView *exportView;
 @end
