@@ -77,7 +77,7 @@ ViewController *view;
     [psdbutton setHidden:YES];
     [mailbutton setHidden:YES];
     [colorView setBackgroundColor:[UIColor clearColor]];
-    [rgbValue setText:@"to add a"];
+    [rgbValue setText:@"and tilt forward to add a"];
     [hexValue setText:@"{ swatch }"];
 }
 

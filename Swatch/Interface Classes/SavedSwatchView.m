@@ -35,9 +35,12 @@ NSMutableArray *colorArray;
     [self addSubview:scrollableSwatches];
     exportView = [[ExportSwatchView alloc] init:80];
     [self addSubview:exportView];
+
+    
     if ([colorArray count] == 0) {
         [exportView setNoSwatchesView];
     }
+
     return self;
 }
 
@@ -98,6 +101,7 @@ NSMutableArray *colorArray;
     for (NSString* elem in arr) {
         [result addObject:[NSString colorFromNSString: elem]];
     }
+    NSLog(@"%@", result);
     return result;
 }
 

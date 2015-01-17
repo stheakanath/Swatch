@@ -270,6 +270,7 @@
 				TargetAttributes = {
 					EBF2E7E11A5DDF5900D447F7 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = SNE84GN9W7;
 					};
 					EBF2E7FA1A5DDF5900D447F7 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -454,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_NS_ASSERTIONS = YES;
 				INFOPLIST_FILE = Swatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -468,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_NS_ASSERTIONS = NO;
 				INFOPLIST_FILE = Swatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

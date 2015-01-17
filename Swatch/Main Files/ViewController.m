@@ -48,6 +48,7 @@ ExportSwatchView *view;
     [self.view addSubview:self.photobutton];
     view = self.topcontroller.savedswatches.exportView;
     view.delegate = self;
+    [self showFirstRunAlerts];
 }
 
 
@@ -76,6 +77,21 @@ ExportSwatchView *view;
     UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
     [self.topcontroller setImage:image];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) showFirstRunAlerts {
+    BOOL ranBefore = [[NSUserDefaults standardUserDefaults] boolForKey:@"RanBefore"];
+    if (!ranBefore) {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"{Swatch} Instructions"
+                              message:@"1. To add swatch hold down on screen and tilt device forward.\n2. To delete swatch, hold and release swatch.\n3. To see details, click swatch."
+                              delegate:self
+                              cancelButtonTitle:@"Enjoy!"
+                              otherButtonTitles:nil];
+        [alert show];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"RanBefore"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 @end
