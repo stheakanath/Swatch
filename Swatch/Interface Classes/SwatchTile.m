@@ -21,7 +21,6 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"sex");
     SavedSwatchView *test = [SavedSwatchView alloc];
     [test.exportView setDetails:color];
 }

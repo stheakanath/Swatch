@@ -19,14 +19,12 @@ UIButton *mailbutton;
 
 - (id) init:(int)below {
     self = [super initWithFrame:CGRectMake(0, below, [[UIScreen mainScreen] bounds].size.width, 100)];
-
     colorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 80)];
     [self addSubview:colorView];
-    [colorView setBackgroundColor:[UIColor blueColor]];
     rgbValue = [[RalewayLabel alloc] init: 0];
-    [rgbValue setText:@"rgb: 33 66 83"];
+    [rgbValue setText:@"select a"];
     hexValue = [[RalewayLabel alloc] init: 30];
-    [hexValue setText:@"hex: #214253"];
+    [hexValue setText:@"{ swatch }"];
     [self addSubview:rgbValue];
     [self addSubview:hexValue];
     psdbutton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -43,7 +41,6 @@ UIButton *mailbutton;
 }
 
 - (void) setDetails:(UIColor*) rcolor{
-    NSLog(@"hi");
     [colorView setBackgroundColor:rcolor];
     [rgbValue setText:[NSString cleanStringFromUIColor: rcolor]];
     [hexValue setText:[NSString hexStringForColor:rcolor]];

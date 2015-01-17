@@ -41,12 +41,16 @@ NSMutableArray *colorArray;
 
 - (void) loadSwatches {
     offset = 0;
+    [viewContainingSwatches.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     for (id color in [colorArray reverseObjectEnumerator]) {
         SwatchTile *swatch = [[SwatchTile alloc] init:color offset:offset];
         offset += 50;
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
         singleTap.numberOfTapsRequired = 1;
         [swatch addGestureRecognizer:singleTap];
+        UILongPressGestureRecognizer *longDelete = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleDelete:)];
+        longDelete.minimumPressDuration=0.2;
+        [swatch addGestureRecognizer:longDelete];
         [viewContainingSwatches addSubview:swatch];
         [exportView setDetails:color];
     }
@@ -57,6 +61,15 @@ NSMutableArray *colorArray;
 
 - (void)handleTapFrom:(UITapGestureRecognizer *)recognizer {
     [exportView setDetails:((SwatchTile*)[recognizer view]).color];
+}
+
+- (void)handleDelete:(UILongPressGestureRecognizer *)recognizer {
+    NSLog(@"Deleting Element");
+    [colorArray removeObject:((SwatchTile*)[recognizer view]).color];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:[self convertToNSString:colorArray] forKey:@"colors"];
+    [userDefaults synchronize];
+    [self loadSwatches];
 }
 
 - (void)addSwatch: (UIColor*)color {
