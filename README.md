@@ -6,7 +6,7 @@ Ever wanted to get the RGB value of a picture to use for your project?
 Even better, you can export this to Adobe Photoshop, Illustrator using the Adobe Swatch Exchange format.
 
 Features:
-1. Allows users to select a {swatch} from any image on your iPhone.
+1. Allows users to select a {swatch} from any image on your iPhone.\n
 2. Allows users to export {swatch} to Adobe format or email RGB/hex value.
 3. You can see {swatch} in more detail, seeing its RGB and hex value. 
 4. Select {swatches} precisely, using the built in animated magnifying glass. Just hold down on image to use!
