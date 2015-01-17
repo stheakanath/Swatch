@@ -44,7 +44,7 @@ UIButton *mailbutton;
     [colorView setBackgroundColor:rcolor];
     [rgbValue setText:[NSString cleanStringFromUIColor: rcolor]];
     [hexValue setText:[NSString hexStringForColor:rcolor]];
-    if ([NSString totalvalue:rcolor] > 255) {
+    if ([NSString totalvalue:rcolor] > 378) {
         [mailbutton setImage:[UIImage imageNamed:@"mail_dark.png"] forState:UIControlStateNormal];
         [psdbutton setImage:[UIImage imageNamed:@"psd_dark.png"] forState:UIControlStateNormal];
         [rgbValue setTextColor:[UIColor blackColor]];
