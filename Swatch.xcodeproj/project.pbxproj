@@ -17,6 +17,10 @@
 		EB32A0AB1A5E2AEA000DAE5A /* ImageSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A0AA1A5E2AEA000DAE5A /* ImageSelectionView.m */; };
 		EB65618B1A687A8C00D60186 /* UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB65618A1A687A8C00D60186 /* UIColorAdditions.m */; };
 		EB65618F1A68E53000D60186 /* RalewayLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB65618E1A68E53000D60186 /* RalewayLabel.m */; };
+		EB7456AA1A6A2BC9001F1FA7 /* ASEColorWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7456A91A6A2BC9001F1FA7 /* ASEColorWriter.m */; };
+		EB7456AC1A6A2BE3001F1FA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7456AB1A6A2BE3001F1FA7 /* CoreGraphics.framework */; };
+		EB7456AE1A6A2BE8001F1FA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7456AD1A6A2BE8001F1FA7 /* UIKit.framework */; };
+		EB7456B01A6A2BEF001F1FA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7456AF1A6A2BEF001F1FA7 /* Foundation.framework */; };
 		EB76DD951A67716400DF4700 /* SavedSwatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD941A67716400DF4700 /* SavedSwatchView.m */; };
 		EB76DD9B1A6772F100DF4700 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD981A6772F100DF4700 /* AppDelegate.m */; };
 		EB76DD9C1A6772F100DF4700 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76DD9A1A6772F100DF4700 /* ViewController.m */; };
@@ -57,6 +61,11 @@
 		EB65618C1A68E3FE00D60186 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
 		EB65618D1A68E53000D60186 /* RalewayLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RalewayLabel.h; path = "Interface Classes/RalewayLabel.h"; sourceTree = "<group>"; };
 		EB65618E1A68E53000D60186 /* RalewayLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RalewayLabel.m; path = "Interface Classes/RalewayLabel.m"; sourceTree = "<group>"; };
+		EB7456A81A6A2BC9001F1FA7 /* ASEColorWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASEColorWriter.h; sourceTree = "<group>"; };
+		EB7456A91A6A2BC9001F1FA7 /* ASEColorWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASEColorWriter.m; sourceTree = "<group>"; };
+		EB7456AB1A6A2BE3001F1FA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EB7456AD1A6A2BE8001F1FA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EB7456AF1A6A2BEF001F1FA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB76DD931A67716400DF4700 /* SavedSwatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedSwatchView.h; path = "Interface Classes/SavedSwatchView.h"; sourceTree = "<group>"; };
 		EB76DD941A67716400DF4700 /* SavedSwatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedSwatchView.m; path = "Interface Classes/SavedSwatchView.m"; sourceTree = "<group>"; };
 		EB76DD971A6772F100DF4700 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Main Files/AppDelegate.h"; sourceTree = "<group>"; };
@@ -85,6 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7456B01A6A2BEF001F1FA7 /* Foundation.framework in Frameworks */,
+				EB7456AE1A6A2BE8001F1FA7 /* UIKit.framework in Frameworks */,
+				EB7456AC1A6A2BE3001F1FA7 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +129,8 @@
 				EB65618A1A687A8C00D60186 /* UIColorAdditions.m */,
 				EB65618D1A68E53000D60186 /* RalewayLabel.h */,
 				EB65618E1A68E53000D60186 /* RalewayLabel.m */,
+				EB7456A81A6A2BC9001F1FA7 /* ASEColorWriter.h */,
+				EB7456A91A6A2BC9001F1FA7 /* ASEColorWriter.m */,
 			);
 			name = "Interface Files";
 			sourceTree = "<group>";
@@ -149,6 +163,9 @@
 		EBF2E7D91A5DDF5900D447F7 = {
 			isa = PBXGroup;
 			children = (
+				EB7456AF1A6A2BEF001F1FA7 /* Foundation.framework */,
+				EB7456AD1A6A2BE8001F1FA7 /* UIKit.framework */,
+				EB7456AB1A6A2BE3001F1FA7 /* CoreGraphics.framework */,
 				EBF2E7E41A5DDF5900D447F7 /* Swatch */,
 				EBF2E7FE1A5DDF5900D447F7 /* SwatchTests */,
 				EBF2E7E31A5DDF5900D447F7 /* Products */,
@@ -311,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7456AA1A6A2BC9001F1FA7 /* ASEColorWriter.m in Sources */,
 				EB65618F1A68E53000D60186 /* RalewayLabel.m in Sources */,
 				EB76DD9C1A6772F100DF4700 /* ViewController.m in Sources */,
 				EB1316191A5FB0F100C7094E /* ImagePreviewButton.m in Sources */,

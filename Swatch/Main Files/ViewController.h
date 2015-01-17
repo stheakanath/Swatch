@@ -10,8 +10,9 @@
 #import "ImageSelectionView.h"
 #import "ImagePreviewButton.h"
 #import "SavedSwatchView.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @end
 

@@ -10,7 +10,6 @@
 #import "UIColorAdditions.h"
 #import "ExportSwatchView.h"
 
-
 UIView *viewContainingSwatches;
 NSMutableArray *colorArray;
 
@@ -36,6 +35,9 @@ NSMutableArray *colorArray;
     [self addSubview:scrollableSwatches];
     exportView = [[ExportSwatchView alloc] init:80];
     [self addSubview:exportView];
+    if ([colorArray count] == 0) {
+        [exportView setNoSwatchesView];
+    }
     return self;
 }
 
@@ -43,6 +45,7 @@ NSMutableArray *colorArray;
     offset = 0;
     [viewContainingSwatches.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     for (id color in [colorArray reverseObjectEnumerator]) {
+        NSLog(@"%i", offset);
         SwatchTile *swatch = [[SwatchTile alloc] init:color offset:offset];
         offset += 50;
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
@@ -56,7 +59,11 @@ NSMutableArray *colorArray;
     }
     viewContainingSwatches.frame = CGRectMake(0, 0, offset, 60);
     scrollableSwatches.contentSize = viewContainingSwatches.frame.size;
-    [exportView setDetails:[colorArray lastObject]];
+    if ([colorArray count] == 0) {
+        [exportView setNoSwatchesView];
+    } else {
+        [exportView setDetails:[colorArray lastObject]];
+    }
 }
 
 - (void)handleTapFrom:(UITapGestureRecognizer *)recognizer {
@@ -64,18 +71,21 @@ NSMutableArray *colorArray;
 }
 
 - (void)handleDelete:(UILongPressGestureRecognizer *)recognizer {
-    NSLog(@"Deleting Element");
-    [colorArray removeObject:((SwatchTile*)[recognizer view]).color];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:[self convertToNSString:colorArray] forKey:@"colors"];
-    [userDefaults synchronize];
-    [self loadSwatches];
+    if ([recognizer state] == UIGestureRecognizerStateEnded) {
+        NSLog(@"Deleting Element");
+        NSLog(@"%@", colorArray);
+        [colorArray removeObject:((SwatchTile*)[recognizer view]).color];
+        NSLog(@"%@", colorArray);
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:[self convertToNSString:colorArray] forKey:@"colors"];
+        [userDefaults synchronize];
+        [self loadSwatches];
+    }
 }
 
 - (void)addSwatch: (UIColor*)color {
     if (!(color == nil) && !([color isEqual:[colorArray lastObject]])) {
         [colorArray addObject:color];
-        NSLog(@"%@", colorArray);
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:[self convertToNSString:colorArray] forKey:@"colors"];
         [userDefaults synchronize];

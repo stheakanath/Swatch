@@ -8,10 +8,15 @@
 
 #import "ExportSwatchView.h"
 #import "UIColorAdditions.h"
+#import "ASEColorWriter.h"
+#import "ViewController.h"
 
 UIView *colorView;
 UIButton *psdbutton;
 UIButton *mailbutton;
+RalewayLabel *empty;
+ViewController *view;
+
 
 @implementation ExportSwatchView
 
@@ -21,8 +26,11 @@ UIButton *mailbutton;
     self = [super initWithFrame:CGRectMake(0, below, [[UIScreen mainScreen] bounds].size.width, 100)];
     colorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 80)];
     [self addSubview:colorView];
+    view = [ViewController new];
+    
     rgbValue = [[RalewayLabel alloc] init: 0];
     [rgbValue setText:@"select a"];
+    empty = [[RalewayLabel alloc] init: -30];
     hexValue = [[RalewayLabel alloc] init: 30];
     [hexValue setText:@"{ swatch }"];
     [self addSubview:rgbValue];
@@ -37,10 +45,16 @@ UIButton *mailbutton;
     [mailbutton setImage:[UIImage imageNamed:@"mail_light.png"] forState:UIControlStateNormal];
     [mailbutton addTarget:self action:@selector(sendmail) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:mailbutton];
+    [psdbutton setHidden:YES];
+    [mailbutton setHidden:YES];
     return self;
 }
 
 - (void) setDetails:(UIColor*) rcolor{
+    [psdbutton setHidden:NO];
+    [mailbutton setHidden:NO];
+    [empty removeFromSuperview];
+    color = rcolor;
     [colorView setBackgroundColor:rcolor];
     [rgbValue setText:[NSString cleanStringFromUIColor: rcolor]];
     [hexValue setText:[NSString hexStringForColor:rcolor]];
@@ -57,20 +71,31 @@ UIButton *mailbutton;
     }
 }
 
+- (void) setNoSwatchesView {
+    [empty setText:@"press and hold image"];
+    [self addSubview:empty];
+    [psdbutton setHidden:YES];
+    [mailbutton setHidden:YES];
+    [colorView setBackgroundColor:[UIColor clearColor]];
+    [rgbValue setText:@"to add a"];
+    [hexValue setText:@"{ swatch }"];
+}
+
 - (void) sendmail {
-    NSString *recipients = @"mailto:sendto@domain.com&subject=Swatch Export";
-    NSString *body = [NSString stringWithFormat:@"&body=%@ %@", [rgbValue text], [hexValue text]];
-    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
-    email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
+    MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+    [mailViewController setSubject:@"{Swatch} - Swatch Data"];
+    [mailViewController setMessageBody:[NSString stringWithFormat:@"{Swatch} Data - %@ %@", [rgbValue text], [hexValue text]] isHTML:YES];
+    [self.delegate buttonTapped:mailViewController];
 }
 
 - (void) exportpsd {
-    NSString *recipients = @"mailto:sendto@domain.com&subject=Swatch Export";
-    NSString *body = [NSString stringWithFormat:@"&body=%@ %@", [rgbValue text], [hexValue text]];
-    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
-    email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
+    NSArray *colors = @[color];
+    ASEColorWriter *writer = [[ASEColorWriter alloc] initWithColors:colors paletteName:@"Swatch Exported"];
+    NSData *swatchData = [writer data];
+    MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+    [mailViewController setSubject:@"{Swatch} - ASE Export"];
+    [mailViewController addAttachmentData:swatchData mimeType:@"application/octet-stream" fileName:@"swatches.ase"];
+    [self.delegate buttonTapped:mailViewController];
 }
 
 

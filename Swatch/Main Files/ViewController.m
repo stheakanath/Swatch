@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "ExportSwatchView.h"
 
-@interface ViewController ()
+@interface ViewController ()<ExportSwatchViewDelegate>
 
 @property (nonatomic, strong) ImagePreviewButton *closebutton;
 @property (nonatomic, strong) ImagePreviewButton *photobutton;
@@ -16,14 +17,27 @@
 
 @end
 
+ExportSwatchView *view;
+
 @implementation ViewController
+
+#pragma mark - MFMailComposeViewControllerDelegate
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)buttonTapped:(MFMailComposeViewController*)controller {
+    controller.mailComposeDelegate = self;
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.topcontroller = [[ImageSelectionView alloc] init];
     [self.view setBackgroundColor:[UIColor colorWithRed:33.0/255.0 green:39.0/255.0 blue:49.0/255.0 alpha:1]];
     [self.view addSubview:self.topcontroller];
-    
     //Buttons
     self.closebutton = [[ImagePreviewButton alloc] init:@"closeicon.png" belowTop:20];
     [self.closebutton addTarget:self action:@selector(cancelImage:) forControlEvents:UIControlEventTouchUpInside];
@@ -32,6 +46,8 @@
     self.photobutton = [[ImagePreviewButton alloc] init:@"photoicon.png" belowTop:[[UIScreen mainScreen] bounds].size.width-60];
     [self.photobutton addTarget:self action:@selector(addImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.photobutton];
+    view = self.topcontroller.savedswatches.exportView;
+    view.delegate = self;
 }
 
 
