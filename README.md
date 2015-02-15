@@ -28,8 +28,3 @@ Click on the swatch and click on the PSD button, this allows you to export an Ad
 4. Additional export formats.
 5. Slide up to delete {swatch}.
 6. Slide up to bring up the {swatch} toolbar. 
-
-# Contributors
-Sony Theakanath (Berkeley) - Lead iOS Engineer
-Michael Zhu (Stanford) - UI Designer
-Dipsikha Halder (Berkeley) - UI Designer
